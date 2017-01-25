@@ -12,17 +12,16 @@ void setup() {
 
 void draw() {
   
-  blendMode(ADD);
+  //blendMode(ADD);
   
-  background(0);
+  background(128);
   moscoding.disableStyle();
-  fill(255);
+  fill(0);
   noStroke();
-  
   
   shape(moscoding, width/2 - fileWidth/2, height/2 - fileHeight/2, fileWidth, fileHeight);
   
-  ambientLight(random(64, 255), random(64, 255), random(64, 255));
+  /*ambientLight(random(64, 255), random(64, 255), random(64, 255));
   
   for (int k = 0; k < 10; k++) {
     fill(255, random(0, 255));
@@ -41,5 +40,5 @@ void draw() {
       translate(1*cellSize/2, 1*cellSize/2, random(-10, 10));
     }
   }
-  saveFrame("######-frame.png");
+  //saveFrame("######-frame.png");*/
 }
