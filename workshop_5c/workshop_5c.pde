@@ -13,7 +13,7 @@ void draw() {
   a.display();
   a.fall();
   a.changeColor();
-  
+  //println( a.returnValue() );
 }
 
 
@@ -57,6 +57,10 @@ class Circle {
       clr = color(255, 255, 255);
     }
     
+  }
+  
+  int returnValue() {
+    return int( x * y );
   }
 
 }
