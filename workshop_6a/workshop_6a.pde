@@ -1,20 +1,19 @@
-int x = 10, dm = 100;
+int x = 10;
 Circle a;
-color bg = color(0);
 
 void setup() {
   size(640, 480);
   frameRate(10);
-  a = new Circle(width/2, height/2, dm, 255);
+  a = new Circle(width/2, height/2, 100, 255);
 }
 
 void draw() {
-  background(bg);
+  background(0);
   ellipseMode(CENTER);
   a.display();
   a.fall();
   a.changeColor();
-  bg = a.getColor();
+  //println( a.returnValue() );
 }
 
 
@@ -36,11 +35,9 @@ class Circle {
     fill(clr);
     noStroke();
     ellipse(x, y, d, d);
-    //println(clr);
   }
   
   void changeDiameter() {
-    
     d = random(10, 100);
   }
   
@@ -53,7 +50,7 @@ class Circle {
   }
   
   void changeColor() {
-    println(dm);
+    
     if ( abs(mouseY - y) < 10 ) {
       clr = color(255, 0, 0);
     } else {
@@ -62,11 +59,8 @@ class Circle {
     
   }
   
-  int getColor() {
-    if ( green(clr) != 255 ) {
-      return clr;
-    } else {
-      return color(0);
-    }
+  int returnValue() {
+    return int( x * y );
   }
+
 }

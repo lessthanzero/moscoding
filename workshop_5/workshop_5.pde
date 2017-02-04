@@ -4,11 +4,11 @@ PVector location;
 PVector velocity;
 
 void setup() {
-  size(200,200);
+  size(400,400);
   smooth();
   
-  location = new PVector(100,100);
-  velocity = new PVector(2.5,5);
+  location = new PVector(100, 100);
+  velocity = new PVector(2.5, 5);
 }
 
 void draw() {
